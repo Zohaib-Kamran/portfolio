@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-dark-900 text-gray-100 font-sans overflow-x-hidden;
+  background: linear-gradient(135deg, #111827 0%, #0f172a 100%);
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-dark-800;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-accent-500 rounded-full;
+  transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-accent-400;
+}
+
+/* Selection Styling */
+::selection {
+  @apply bg-accent-500 text-white;
+}
+
+/* Smooth Transitions */
+@layer components {
+  .smooth-transition {
+    @apply transition-all duration-300 ease-out;
+  }
+
+  .btn-primary {
+    @apply px-8 py-3 rounded-lg font-semibold bg-accent-500 text-white hover:bg-accent-600 smooth-transition shadow-lg hover:shadow-glow;
+  }
+
+  .btn-secondary {
+    @apply px-8 py-3 rounded-lg font-semibold border-2 border-accent-500 text-accent-400 hover:bg-accent-500 hover:text-white smooth-transition;
+  }
+
+  .glass-effect {
+    @apply backdrop-blur-md bg-white bg-opacity-10 border border-white border-opacity-20 rounded-xl;
+  }
+
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-accent-400 to-accent-600 bg-clip-text text-transparent;
+  }
+
+  .heading-xl {
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold;
+  }
+
+  .heading-lg {
+    @apply text-3xl md:text-4xl font-bold;
+  }
+
+  .heading-md {
+    @apply text-2xl md:text-3xl font-bold;
+  }
+}
+
+/* Animated Background */
+.animated-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.bg-blob {
+  position: absolute;
+  background: radial-gradient(circle at 30% 50%, rgba(59, 130, 246, 0.1) 0%, transparent 50%);
+  border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+  animation: blob 8s infinite;
+}
+
+.blob1 {
+  top: -10%;
+  left: -10%;
+  width: 500px;
+  height: 500px;
+  animation-delay: 0s;
+}
+
+.blob2 {
+  top: 50%;
+  right: -10%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle at 30% 50%, rgba(147, 51, 234, 0.1) 0%, transparent 50%);
+  animation-delay: 2s;
+}
+
+.blob3 {
+  bottom: -10%;
+  left: 30%;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle at 30% 50%, rgba(34, 197, 94, 0.1) 0%, transparent 50%);
+  animation-delay: 4s;
+}
+
+@keyframes blob {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  25% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+  50% {
+    transform: translate(-30px, 20px) scale(0.9);
+  }
+  75% {
+    transform: translate(50px, 50px) scale(1.05);
+  }
+}
