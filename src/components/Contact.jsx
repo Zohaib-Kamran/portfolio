@@ -87,10 +87,10 @@ export const Contact = () => {
                 <div className="text-2xl mb-2">📧</div>
                 <p className="text-sm text-gray-400">Email</p>
                 <a
-                  href="mailto:zohaib@example.com"
+                  href="mailto:zohaibkamran51@gmail.com"
                   className="text-accent-400 hover:text-accent-300 smooth-transition font-semibold"
                 >
-                  zohaib@example.com
+                  zohaibkamran51@gmail.com
                 </a>
               </div>
             </motion.div>
