@@ -131,6 +131,7 @@ export const SERVICES_DATA = {
 export const CONTACT_DATA = {
   title: "Let's Work Together",
   description: "Have a project in mind? Let's chat about how I can help bring your vision to life.",
+  email: "zohaibkamran51@gmail.com",
   formFields: [
     { name: "name", label: "Your Name", type: "text", required: true },
     { name: "email", label: "Email Address", type: "email", required: true },
@@ -143,6 +144,8 @@ export const CONTACT_DATA = {
     { icon: "Instagram", url: "https://www.instagram.com/zohayb_q/?hl=en", label: "Instagram" },
   ],
 };
+
+export const PROFILE_IMAGE = "/images/profile.jpg";
 
 export const NAVIGATION_ITEMS = [
   { label: "Home", href: "#hero" },

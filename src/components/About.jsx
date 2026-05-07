@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ABOUT_DATA } from '../utils/constants';
+import { ABOUT_DATA, PROFILE_IMAGE } from '../utils/constants';
 import { Section, SectionTitle, ScrollReveal } from './shared';
 
 export const About = () => {
@@ -15,19 +15,15 @@ export const About = () => {
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.3 }}
           >
-            {/* Avatar with Gradient Background */}
-            <div className="absolute inset-0 bg-gradient-to-br from-accent-500 via-purple-500 to-pink-500 opacity-30" />
+            {/* Gradient Background */}
+            <div className="absolute inset-0 bg-gradient-to-br from-accent-500 via-purple-500 to-pink-500 opacity-30 z-0" />
             
-            {/* SVG Avatar */}
-            <div className="w-full h-full flex items-center justify-center">
-              <motion.div
-                className="text-9xl"
-                animate={{ y: [0, -10, 0] }}
-                transition={{ duration: 4, repeat: Infinity }}
-              >
-                👨‍💻
-              </motion.div>
-            </div>
+            {/* Profile Image */}
+            <img 
+              src={PROFILE_IMAGE} 
+              alt="Zohaib Kamran" 
+              className="w-full h-full object-cover relative z-10"
+            />
 
             {/* Decorative Elements */}
             <div className="absolute -top-10 -right-10 w-40 h-40 bg-accent-500 rounded-full opacity-10 blur-3xl" />
