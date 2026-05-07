@@ -138,9 +138,9 @@ export const CONTACT_DATA = {
     { name: "message", label: "Tell me about your project", type: "textarea", required: true },
   ],
   socials: [
-    { icon: "GitHub", url: "https://github.com", label: "GitHub" },
-    { icon: "LinkedIn", url: "https://linkedin.com", label: "LinkedIn" },
-    { icon: "Twitter", url: "https://twitter.com", label: "Twitter" },
+    { icon: "GitHub", url: "https://github.com/Zohaib-Kamran", label: "GitHub" },
+    { icon: "LinkedIn", url: "https://www.linkedin.com/in/zohaib-kamran-40740a272/", label: "LinkedIn" },
+    { icon: "Instagram", url: "https://www.instagram.com/zohayb_q/?hl=en", label: "Instagram" },
   ],
 };
 
